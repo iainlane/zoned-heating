@@ -74,6 +74,7 @@ async def async_set_hvac_mode(hass: HomeAssistant, entity_ids, hvac_mode: str):
             context={},
         )
     )
+    _LOGGER.debug("setting hvac mode to {} for {}".format(hvac_mode, entity_ids))
     await service_task
 
 
@@ -96,6 +97,7 @@ async def async_set_temperature(hass: HomeAssistant, entity_ids, temperature: fl
             context={},
         )
     )
+    _LOGGER.debug("setting temperature to {} for {}".format(temperature, entity_ids))
     await service_task
 
 
@@ -117,6 +119,7 @@ async def async_set_switch_state(hass: HomeAssistant, entity_ids, state: str):
             context={},
         )
     )
+    _LOGGER.debug("setting switch state to {} for {}".format(state, entity_ids))
     await service_task
 
 
